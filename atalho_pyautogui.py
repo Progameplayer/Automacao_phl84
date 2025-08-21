@@ -27,11 +27,11 @@ def automatizar_importaçao():
     sleep(6)
     click(x=673, y=112, duration=1)
     sleep(2)
-    write("susy")
+    write("nome_de_usuario")
     sleep(2)
     press("tab")
     sleep(2)
-    write("123456")
+    write("******")
     sleep(2)
     press("enter")
     sleep(4)
@@ -114,5 +114,6 @@ keyboard.add_hotkey("ctrl+alt+i", automatizar_importaçao)
 keyboard.wait("esc")
 
 #janela.mainloop()
+
 
 
