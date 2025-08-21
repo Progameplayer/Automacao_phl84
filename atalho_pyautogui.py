@@ -27,11 +27,13 @@ def automatizar_importaçao():
     sleep(6)
     click(x=673, y=112, duration=1)
     sleep(2)
+    # Alterei o "real" nome de usuario para fins de segurança
     write("nome_de_usuario")
     sleep(2)
     press("tab")
     sleep(2)
-    write("******")
+    # Alterei a "real" senha para fins de segurança
+    write("sua_senha")
     sleep(2)
     press("enter")
     sleep(4)
@@ -114,6 +116,7 @@ keyboard.add_hotkey("ctrl+alt+i", automatizar_importaçao)
 keyboard.wait("esc")
 
 #janela.mainloop()
+
 
 
 
