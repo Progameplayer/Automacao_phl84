@@ -28,12 +28,12 @@ def automatizar_importaçao():
     click(x=673, y=112, duration=1)
     sleep(2)
     # Alterei o "real" nome de usuario para fins de segurança
-    write("nome_de_usuario")
+    write("super")
     sleep(2)
     press("tab")
     sleep(2)
     # Alterei a "real" senha para fins de segurança
-    write("sua_senha")
+    write("super")
     sleep(2)
     press("enter")
     sleep(4)
@@ -45,7 +45,7 @@ def automatizar_importaçao():
     sleep(2)
     click(x=299, y=88, duration=1)
     sleep(5)
-    with open("importação.txt", "r") as arquivo:
+    with open("importação.txt", "r", encoding= "utf-8) as arquivo:
         for linha in arquivo:
             livros = [x.strip() for x in linha.split(",") if x.strip()]
             for livro in livros:
@@ -75,7 +75,7 @@ def automatizar_importaçao():
                     else:
                         continue 
                 except ImageNotFoundException:
-                    with open("livros_nao_encontrados.txt", "a") as f:
+                    with open("livros_nao_encontrados.txt", "a", encoding= "utf-8) as f:
                         livroNotFound = f'# {livro}\n'
                         f.write(livroNotFound)
                         icone = locateOnScreen("Biblioteca_icone.png")
@@ -116,6 +116,7 @@ keyboard.add_hotkey("ctrl+alt+i", automatizar_importaçao)
 keyboard.wait("esc")
 
 #janela.mainloop()
+
 
 
 
