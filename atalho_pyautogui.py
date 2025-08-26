@@ -45,7 +45,7 @@ def automatizar_importaçao():
     sleep(2)
     click(x=299, y=88, duration=1)
     sleep(5)
-    with open("importação.txt", "r", encoding= "utf-8) as arquivo:
+    with open("importação.txt", "r", encoding= "utf-8") as arquivo:
         for linha in arquivo:
             livros = [x.strip() for x in linha.split(",") if x.strip()]
             for livro in livros:
@@ -75,7 +75,7 @@ def automatizar_importaçao():
                     else:
                         continue 
                 except ImageNotFoundException:
-                    with open("livros_nao_encontrados.txt", "a", encoding= "utf-8) as f:
+                    with open("livros_nao_encontrados.txt", "a", encoding= "utf-8") as f:
                         livroNotFound = f'# {livro}\n'
                         f.write(livroNotFound)
                         icone = locateOnScreen("Biblioteca_icone.png")
@@ -116,6 +116,7 @@ keyboard.add_hotkey("ctrl+alt+i", automatizar_importaçao)
 keyboard.wait("esc")
 
 #janela.mainloop()
+
 
 
 
