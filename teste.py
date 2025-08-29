@@ -39,8 +39,8 @@ def auto_importaçao():
     pausa(4, 6)
 
     # Nova aba
-    #navegador.execute_script("window.open('https://acervo.bn.gov.br/sophia_web/', '_blank');")
-    #navegador.switch_to.window(navegador.window_handles[-1])
+    navegador.execute_script("window.open('https://acervo.bn.gov.br/sophia_web/', '_blank');")
+    navegador.switch_to.window(navegador.window_handles[-1])
     
     abas = navegador.window_handles
     navegador.switch_to.window(abas[1])
@@ -101,3 +101,4 @@ botao = CTkButton(api, text="Importar dados", command=auto_importaçao)
 botao.pack(pady=20)
 
 api.mainloop()
+
