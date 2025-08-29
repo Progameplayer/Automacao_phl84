@@ -9,10 +9,10 @@ FAILSAFE = True
 # Interface Grafica - É uma camuflagem para os codigos a fim de esconder a parte complexa do usuario.
 from customtkinter import *
 
-#janela = CTk()
-#janela.title("AUTOMATIZÇÃO DE TAREFAS")
-#janela.geometry("300x300")
-#set_appearance_mode("Dark")
+janela = CTk()
+janela.title("AUTOMATIZÇÃO DE TAREFAS")
+janela.geometry("300x300")
+set_appearance_mode("Dark")
 def automatizar_importaçao():
     sleep(2)
     press("win")
@@ -107,15 +107,13 @@ def automatizar_importaçao():
                 hotkey("ctrl" , "tab")
 
 
-#auto_cadastro = CTkLabel(janela, text = "Automatize a importação de dados:")
-#auto_cadastro.pack(padx = 20, pady = 20)
-#botao = CTkButton(janela, text = "Automatizar Importação", command = automatizar_importaçao, fg_color=("black", "blue"))
-#botao.pack( padx = 20 , pady = 20)
-keyboard.add_hotkey("ctrl+alt+i", automatizar_importaçao)
+auto_cadastro = CTkLabel(janela, text = "Automatize a importação de dados:")
+auto_cadastro.pack(padx = 20, pady = 20)
+botao = CTkButton(janela, text = "Automatizar Importação", command = automatizar_importaçao, fg_color=("black", "blue"))
+botao.pack( padx = 20 , pady = 20)
 
-keyboard.wait("esc")
+janela.mainloop()
 
-#janela.mainloop()
 
 
 
