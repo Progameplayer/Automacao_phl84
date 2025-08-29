@@ -9,10 +9,13 @@ FAILSAFE = True
 # Interface Grafica - É uma camuflagem para os codigos a fim de esconder a parte complexa do usuario.
 from customtkinter import *
 
+# Mini interface grafica (configurações)
 janela = CTk()
 janela.title("AUTOMATIZÇÃO DE TAREFAS")
 janela.geometry("300x300")
 set_appearance_mode("Dark")
+
+# Função que automatiza a importação de livros para a biblioteca de forma automática
 def automatizar_importaçao():
     sleep(2)
     press("win")
@@ -102,17 +105,18 @@ def automatizar_importaçao():
                 click(x=828, y=560, duration = 1)
                 sleep(3)
                 scroll(-99999)
-                #click(x=582, y=696, duration = 1)
+                click(x=582, y=696, duration = 1)
                 sleep(5)
                 hotkey("ctrl" , "tab")
 
-
+# Interação da Interface Grafica com o Usuário 
 auto_cadastro = CTkLabel(janela, text = "Automatize a importação de dados:")
 auto_cadastro.pack(padx = 20, pady = 20)
 botao = CTkButton(janela, text = "Automatizar Importação", command = automatizar_importaçao, fg_color=("black", "blue"))
 botao.pack( padx = 20 , pady = 20)
 
 janela.mainloop()
+
 
 
 
